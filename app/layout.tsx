@@ -14,8 +14,8 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body>
-        <div className="fixed p-[200px] w-[200px] bg-[#ffffff77] z-1 rounded-full shadow-[0px_0px_1500px] shadow-[#ffffff] -left-[350px] -top-[150px]"></div>
-        <div className="fixed p-[200px] w-[200px] bg-[#ffffff75] z-1 rounded-full shadow-[0px_0px_1500px] shadow-[#ffffff] -right-[350px] -bottom-[150px]"></div>
+        <div className="fixed p-[300px] w-[200px] bg-[#ffffff73] z-1 rounded-full shadow-[0px_0px_2000px] shadow-[#ffffff] -left-[580px] -top-[260px]"></div>
+        <div className="fixed p-[300px] w-[200px] bg-[#ffffff73] z-1 rounded-full shadow-[0px_0px_2000px] shadow-[#ffffff] -right-[580px] -bottom-[260px]"></div>
         <p className="text-center text-[#bcbcbc]">Created by Ibrahim</p>
         {children}
       </body>
