@@ -1,9 +1,9 @@
 'use client';
 
-import { useParams } from 'next/navigation';
+// import { useParams } from 'next/navigation';
 
 export default function TicketPage() {
-  const { id } = useParams();
+  // const { id } = useParams();
 
   return (
     <div className="">
