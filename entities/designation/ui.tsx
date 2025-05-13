@@ -6,7 +6,6 @@ import { useEffect } from "react"
 export const Designation = () => {
     return(
         <section>
-            <p>Created by Ibrahim</p>
             {Tickets.map(el=>(
                 <div className="flex p-4">
                     <span key={el.key} className="p-3 mr-1 rounded-2xl" style={{backgroundColor: el.color}}></span>

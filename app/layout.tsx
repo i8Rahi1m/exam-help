@@ -14,6 +14,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body>
+        <p className="text-center text-[#bcbcbc]">Created by Ibrahim</p>
         {children}
       </body>
     </html>
