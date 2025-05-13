@@ -49,7 +49,7 @@ const CollapseSection: React.FC = () => {
         {/* Button for navigation */}
         <button
           onClick={() => handleNavigation(tick.id)}
-          className=" p-1 text-[22px] rounded-2xl hover:bg-[#80808056] cursor-pointer btndj"
+          className=" p-2 text-[22px] rounded-2xl hover:bg-[#80808056] cursor-pointer btndj"
         >
           <LuPanelLeftOpen/>
         </button>

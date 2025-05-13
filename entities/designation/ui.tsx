@@ -1,8 +1,7 @@
 "use client"
 
 import { Tickets } from "@/database/tickets"
-
-
+import { useEffect } from "react"
 
 export const Designation = () => {
     return(

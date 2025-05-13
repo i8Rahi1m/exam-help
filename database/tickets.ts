@@ -1,6 +1,6 @@
 export const Tickets = [
     {
-        key: 1,
+        key: "B1o",
         title: "Биология",
         color: "#86dc3d",
         ticks: [
