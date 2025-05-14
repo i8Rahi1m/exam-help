@@ -17,7 +17,7 @@ const data = [
 
 export const Diagram = () => {
   return (
-    <div className="md:w-[102%] w-[108.5%] h-[300px] -ml-[45px] mt-6">
+    <div className="md:w-[102%] w-[108.5%] h-[300px] -ml-[45px] mt-8">
       <ResponsiveContainer>
         <BarChart layout="vertical" data={data}>
           <CartesianGrid strokeDasharray="5" />
