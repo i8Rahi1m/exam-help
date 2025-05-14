@@ -37,21 +37,20 @@ const CollapseSection: React.FC = () => {
     );
   };
 
-  const handleNavigation = (id: number) => {
-    router.push(`/tickets/${id}`);
+  const handleNavigation = (id: number, title: string) => {
+    router.push(`/${title}/${id}`);
   };
 
   const items: CollapseProps['items'] = Tickets[0].ticks.map((tick) => ({
     key: tick.id.toString(),
     label: (
       <div className="flex justify-between items-center text-white">
-        <span className='-ml-4.5'>Билет {tick.id}</span>
-        {/* Button for navigation */}
+        <span className="-ml-4.5">Билет {tick.id}</span>
         <button
-          onClick={() => handleNavigation(tick.id)}
-          className=" p-2 text-[22px] rounded-2xl hover:bg-[#80808056] cursor-pointer btndj"
+          onClick={() => handleNavigation(tick.id, Tickets[0].key)}
+          className="transition-[0.3s] p-1.5 text-[22px] rounded-2xl hover:bg-[#80808056] cursor-pointer hover:scale-[1.2]"
         >
-          <LuPanelLeftOpen/>
+          <LuPanelLeftOpen />
         </button>
       </div>
     ),
@@ -60,8 +59,14 @@ const CollapseSection: React.FC = () => {
         {parseQuestions(tick.ques)}
       </div>
     ),
-    style: { ...panelStyle, border: "1px solid gray", borderLeft: `5px solid ${Tickets[0].color}`, background: 'black' },
+    style: {
+      ...panelStyle,
+      border: "1px solid gray",
+      borderLeft: `5px solid ${Tickets[0].color}`,
+      background: 'black',
+    },
   }));
+  
 
   return (
     <section className="p-4">
