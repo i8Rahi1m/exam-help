@@ -23,7 +23,7 @@ const CollapseSection: React.FC = () => {
 
   const parseQuestions = (ques: string) => {
     const parts = ques
-      .split(/\n|\t/)
+      .split(/\n/)
       .filter((q) => q.trim() !== '');
 
     return (
