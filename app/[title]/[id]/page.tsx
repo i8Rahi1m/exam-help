@@ -72,7 +72,7 @@ export default function TicketAnswerPage() {
     <div className="p-6 px-4 max-w-4xl mx-auto space-y-6">
       <HomeLink />
       <h1 className="text-2xl font-bold flex items-center">
-        <span className='bg-black w-fit p-2 rounded-2xl border-[1px] text-[27px] mr-1.5' style={{ borderColor: category.color }}>{category.title.toUpperCase()}</span> - Билет {ticket.id}
+        <span className='bg-black w-fit p-2 rounded-2xl border-[1px] text-[19px] mr-1.5' style={{ borderColor: category.color }}>{category.title.toUpperCase()}</span> - Билет {ticket.id}
       </h1>
       <div className="space-y-[40px] pt-3">
         <div className='bg-[#3c3c3c99] p-4 rounded-3xl w-fit'>
