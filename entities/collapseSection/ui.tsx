@@ -30,7 +30,7 @@ const CollapseSection: React.FC = () => {
       <div className="space-y-1 text-[17px] text-[white]">
         {parts.map((line, idx) => (
           <p key={idx}>
-            <strong>{idx + 1}.</strong> {line.trim()}
+            <strong className='pl-1'>{idx + 1}.</strong> {line.trim()}
           </p>
         ))}
       </div>
