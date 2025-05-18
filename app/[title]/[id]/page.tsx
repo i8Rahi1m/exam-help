@@ -45,7 +45,7 @@ export default function TicketAnswerPage() {
             return (
               <p
                 key={index}
-                className="pl-4 before:content-['•'] before:mr-2 before:text-lg before:inline-block"
+                className="pl-2.5 before:content-['•'] before:mr-2 before:text-lg before:inline-block"
               >
                 {part.trim()}
               </p>
@@ -54,7 +54,7 @@ export default function TicketAnswerPage() {
   
           if (prev === "\\c") {
             return (
-              <p key={index} className="pl-4">
+              <p key={index} className="pl-2.5">
                 <span className="font-semibold mr-2">{counter++}.</span>
                 {part.trim()}
               </p>
@@ -77,12 +77,12 @@ export default function TicketAnswerPage() {
       <div className="space-y-[40px] pt-3">
         <div className='bg-[#3c3c3c99] p-4 rounded-3xl w-fit'>
           <h2 className="text-lg font-semibold">Вопросы:</h2>
-          <pre className="whitespace-pre-wrap -mt-4">{ticket.ques}</pre>
+          <pre className="whitespace-pre-wrap -ml-2">{formatTextWithMarkers(ticket.ques)}</pre>
         </div>
 
         {ticket.answers?.map((answer) => (
           <div key={answer.num}>
-            <h2 className="text-lg font-semibold bg-[#323232d9] border-[1px] border-[#808080a0] border-b-0 rounded-t-2xl p-2 px-4 text-[23px]">Ответ {answer.num}:</h2>
+            <h2 className="text-lg font-semibold bg-[#323232d9] border-[1px] border-[#808080a0] border-b-0 rounded-t-2xl p-2 px-4 text-[23px]">Ответ {answer.num}</h2>
             <div className='bg-black p-4 rounded-b-2xl border-[1px] border-[#808080a0] border-t-0 text-[18px]'>{formatTextWithMarkers(answer.ans)}</div>
           </div>
         ))}
