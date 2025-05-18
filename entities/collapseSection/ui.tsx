@@ -55,7 +55,7 @@ const CollapseSection: React.FC = () => {
       </div>
     ),
     children: (
-      <div>
+      <div className='pl-1'>
         {parseQuestions(tick.ques)}
       </div>
     ),
