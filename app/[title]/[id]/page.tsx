@@ -75,14 +75,14 @@ export default function TicketAnswerPage() {
         <span className='bg-black w-fit p-2 rounded-2xl border-[1px] text-[19px] mr-1.5' style={{ borderColor: category.color }}>{category.title.toUpperCase()}</span> - Билет {ticket.id}
       </h1>
       <div className="space-y-[40px] pt-3">
-        <div className='bg-[#3c3c3c99] p-4 rounded-3xl'>
+        <div className='bg-[#3c3c3c99] p-4 rounded-3xl border-[1px] border-[#8080806a]'>
           <h2 className="text-lg font-semibold">Вопросы:</h2>
           <pre className="whitespace-pre-wrap -ml-2">{formatTextWithMarkers(ticket.ques)}</pre>
         </div>
 
         {ticket.answers?.map((answer) => (
           <div key={answer.num}>
-            <h2 className="text-lg font-semibold bg-[#323232d9] border-[1px] border-[#808080a0] border-b-0 rounded-t-2xl p-2 px-4 text-[23px]">Ответ {answer.num}</h2>
+            <h2 className="text-lg font-medium bg-[#323232d9] border-[1px] border-[#8080806a] border-b-0 rounded-t-2xl p-1.5 px-4 text-[23px]">Ответ {answer.num}</h2>
             <div className='bg-black p-4 rounded-b-2xl border-[1px] border-[#808080a0] border-t-0 text-[18px]'>{formatTextWithMarkers(answer.ans)}</div>
           </div>
         ))}
