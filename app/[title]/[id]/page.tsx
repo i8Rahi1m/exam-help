@@ -13,8 +13,6 @@ export default function TicketAnswerPage() {
   const category = Tickets.find(ticket => ticket.key === key);
   const ticket = category?.ticks.find(t => t.id === id);
 
-  const synthRef = useRef<SpeechSynthesisUtterance | null>(null);
-
   if (!category || !ticket) {
     return (
       <div className="p-6 text-center text-red-500">
@@ -82,7 +80,7 @@ export default function TicketAnswerPage() {
     const voices = speechSynthesis.getVoices();
     console.log("Available voices:", voices);
   }, [voicesLoaded]);
-  
+
   function readAloud(text: string) {
     if (typeof window !== 'undefined') {
       speechSynthesis.cancel();
