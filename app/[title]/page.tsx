@@ -1,18 +1,22 @@
 'use client';
 
 import { HomeLink } from "@/components/homeLink/ui";
-import { StatisticLink } from "@/components/statisticLink/ui";
+import { IoStatsChart } from "react-icons/io5";
 import CollapseSection from "@/entities/collapseSection/ui";
 import { Designation } from "@/entities/designation/ui";
-// import { useParams } from 'next/navigation';
+import { useParams } from 'next/navigation';
+import Link from "next/link";
 
 export default function TicketStacks() {
-  // const { id } = useParams();
+  const params = useParams();
+  const key = params?.title as string;
 
   return (
     <div className="">
+      <Link href={`/statistic/${key}`} className="transition-[0.3s] fixed top-[10px] left-[70px] p-2 text-[22px] rounded-full bg-[black] z-2 border-[1px] border-[#ffffffc8] hover:bg-[#434343] hover:shadow-[0px_0px_8px_white] after:shadow-2xl">
+        <IoStatsChart/>
+      </Link>
       <HomeLink/>
-      <StatisticLink/>
       <Designation/>
       <CollapseSection/>
     </div>
