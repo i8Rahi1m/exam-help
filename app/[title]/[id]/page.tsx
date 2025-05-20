@@ -69,9 +69,12 @@ export default function TicketAnswerPage() {
   }, []);
 
   useEffect(() => {
-    const voices = speechSynthesis.getVoices();
-    console.log("Available voices:", voices);
-  }, [voicesLoaded]);
+    if (typeof window !== "undefined") {
+      const utterance = new SpeechSynthesisUtterance("Hello world");
+      speechSynthesis.speak(utterance);
+    }
+  }, []);
+  
   
   if (!category || !ticket) {
     return (
