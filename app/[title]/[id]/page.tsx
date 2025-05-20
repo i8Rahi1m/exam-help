@@ -1,26 +1,18 @@
-'use client';
+"use client";
 
-import { useParams } from 'next/navigation';
-import { Tickets } from '@/database/tickets';
-import { HomeLink } from '@/components/homeLink/ui';
-import { JSX, useEffect, useState } from 'react';
+import { useParams } from "next/navigation";
+import { Tickets } from "@/database/tickets";
+import { HomeLink } from "@/components/homeLink/ui";
+import { JSX, useEffect, useState } from "react";
 
 export default function TicketAnswerPage() {
   const params = useParams();
   const key = params?.title as string;
   const id = parseInt(params?.id as string);
   const [voicesLoaded, setVoicesLoaded] = useState(false);
-  const category = Tickets.find(ticket => ticket.key === key);
-  const ticket = category?.ticks.find(t => t.id === id);
+  const category = Tickets.find((ticket) => ticket.key === key);
+  const ticket = category?.ticks.find((t) => t.id === id);
 
-  if (!category || !ticket) {
-    return (
-      <div className="p-6 text-center text-red-500">
-        <HomeLink />
-        <p>Билет не найден.</p>
-      </div>
-    );
-  }
 
   function formatTextWithMarkers(text: string): JSX.Element {
     const parts = text.split(/(\\[dcn])/g);
@@ -72,7 +64,7 @@ export default function TicketAnswerPage() {
         };
       }
     };
-  
+
     loadVoices();
   }, []);
 
@@ -80,34 +72,44 @@ export default function TicketAnswerPage() {
     const voices = speechSynthesis.getVoices();
     console.log("Available voices:", voices);
   }, [voicesLoaded]);
+  
+  if (!category || !ticket) {
+    return (
+      <div className="p-6 text-center text-red-500">
+        <HomeLink />
+        <p>Билет не найден.</p>
+      </div>
+    );
+  }
 
   function readAloud(text: string) {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       speechSynthesis.cancel();
-  
+
       const voices = speechSynthesis.getVoices();
-      let selectedVoice = voices.find(v =>
-        v.lang === 'ru-RU' && /Google|Yandex|Microsoft/i.test(v.name)
+      let selectedVoice = voices.find(
+        (v) => v.lang === "ru-RU" && /Google|Yandex|Microsoft/i.test(v.name)
       );
-  
+
       // fallback to any Russian voice if no premium ones found
       if (!selectedVoice) {
-        selectedVoice = voices.find(v => v.lang === 'ru-RU');
+        selectedVoice = voices.find((v) => v.lang === "ru-RU");
       }
-  
-      const utterance = new SpeechSynthesisUtterance(text.replace(/\\[dcn]/g, ''));
-      utterance.lang = 'ru-RU';
+
+      const utterance = new SpeechSynthesisUtterance(
+        text.replace(/\\[dcn]/g, "")
+      );
+      utterance.lang = "ru-RU";
       if (selectedVoice) utterance.voice = selectedVoice;
       utterance.rate = 1.4; // adjust speaking speed (0.1 - 10)
       utterance.pitch = 1; // adjust tone (0 - 2)
-  
+
       speechSynthesis.speak(utterance);
     }
   }
-  
 
   function stopReading() {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       speechSynthesis.cancel();
     }
   }
@@ -128,7 +130,9 @@ export default function TicketAnswerPage() {
       <div className="space-y-[40px] pt-3">
         <div className="bg-[#3c3c3c99] p-4 rounded-3xl border-[1px] border-[#8080806a]">
           <h2 className="text-lg font-semibold">Вопросы:</h2>
-          <pre className="whitespace-pre-wrap -ml-2">{formatTextWithMarkers(ticket.ques)}</pre>
+          <pre className="whitespace-pre-wrap -ml-2">
+            {formatTextWithMarkers(ticket.ques)}
+          </pre>
         </div>
 
         {ticket.answers?.map((answer) => (
