@@ -50,21 +50,6 @@ export default function TicketAnswerPage() {
       </div>
     );
   }
-  useEffect(() => {
-    const loadVoices = () => {
-      const voices = speechSynthesis.getVoices();
-      if (voices.length) {
-        setVoicesLoaded(true);
-      } else {
-        // try again when voices list updates
-        speechSynthesis.onvoiceschanged = () => {
-          setVoicesLoaded(true);
-        };
-      }
-    };
-
-    loadVoices();
-  }, []);
 
   useEffect(() => {
     const loadVoices = () => {
