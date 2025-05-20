@@ -3,7 +3,7 @@
 import { useParams } from 'next/navigation';
 import { Tickets } from '@/database/tickets';
 import { HomeLink } from '@/components/homeLink/ui';
-import { JSX, useEffect, useRef, useState } from 'react';
+import { JSX, useEffect, useState } from 'react';
 
 export default function TicketAnswerPage() {
   const params = useParams();
