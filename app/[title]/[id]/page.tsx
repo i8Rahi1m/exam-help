@@ -9,10 +9,8 @@ export default function TicketAnswerPage() {
   const params = useParams();
   const key = params?.title as string;
   const id = parseInt(params?.id as string);
-  const [voicesLoaded, setVoicesLoaded] = useState(false);
-  const category = Tickets.find((ticket) => ticket.key === key);
-  const ticket = category?.ticks.find((t) => t.id === id);
-
+  
+  const [, setVoicesLoaded] = useState(false);
 
   function formatTextWithMarkers(text: string): JSX.Element {
     const parts = text.split(/(\\[dcn])/g);
@@ -69,9 +67,22 @@ export default function TicketAnswerPage() {
   }, []);
 
   useEffect(() => {
-    const voices = speechSynthesis.getVoices();
-    console.log("Available voices:", voices);
-  }, [voicesLoaded]);
+    const loadVoices = () => {
+      const voices = speechSynthesis.getVoices();
+      if (voices.length) {
+        setVoicesLoaded(true);
+      } else {
+        speechSynthesis.onvoiceschanged = () => {
+          setVoicesLoaded(true);
+        };
+      }
+    };
+    loadVoices();
+  }, []);
+  
+
+  const category = Tickets.find((ticket) => ticket.key === key);
+  const ticket = category?.ticks.find((t) => t.id === id);
   
   if (!category || !ticket) {
     return (
