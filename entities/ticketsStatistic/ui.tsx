@@ -9,7 +9,7 @@ const TicketsStatistic: React.FC = () => {
   const evenTicks = Tickets[0].ticks.filter((tick) => tick.id % 2 === 0);
 
   return (
-    <section className="p-4">
+    <section className="p-4 mt-[35px]">
       <div className="flex gap-6 justify-between">
         <div className="flex flex-col gap-3">
           {oddTicks.map((el) => (
