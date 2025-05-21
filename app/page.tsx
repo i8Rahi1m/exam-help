@@ -8,7 +8,7 @@ export default function Home() {
         <Link
           href={`/${el.key}`}
           key={el.key}
-          className="transition-[0.7s] flex justify-center items-center bg-[black] w-[46%] h-[42vw] rounded-2xl text-[23px] md:w-[200px] md:h-[200px] hover:bg-[#1d1d1d] hover:text-[24px] hover:scale-105"
+          className="transition-[0.7s] flex justify-center items-center bg-[black] w-full h-[40vw] rounded-2xl text-[25px] md:w-[200px] md:h-[200px] hover:bg-[#1d1d1d] hover:text-[24px] hover:scale-105"
           style={{ border: `2px solid ${el.color}` }}
         >
           {el.title}

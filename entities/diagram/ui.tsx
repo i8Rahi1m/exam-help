@@ -12,26 +12,35 @@ import {
 } from 'recharts';
 import { useParams } from 'next/navigation';
 import { Tickets } from '@/database/tickets';
+import { useEffect, useState } from 'react';
 
 export const Diagram = () => {
   const params = useParams();
   const key = params?.title as string;
   const category = Tickets.find(ticket => ticket.key === key);
 
-  let even = 0;
-  let odd = 0;
+  const [even, setEven] = useState(0);
+  const [odd, setOdd] = useState(0);
 
-  if (category?.ticks) {
-    category.ticks.forEach((tick: { diff: number }) => {
-      if (tick.diff % 2 === 0) {
-        even++;
-      } else {
-        odd++;
-      }
-    });
-  }
+  useEffect(() => {
+    let evenCount = 0;
+    let oddCount = 0;
 
-  const total = category?.ticks?.length || 87;
+    if (category?.ticks) {
+      category.ticks.forEach((tick: { diff: number }) => {
+        if (tick.diff % 2 === 0) {
+          evenCount++;
+        } else {
+          oddCount++;
+        }
+      });
+    }
+
+    sessionStorage.setItem('evenCount', evenCount.toString());
+    sessionStorage.setItem('oddCount', oddCount.toString());
+    setEven(evenCount);
+    setOdd(oddCount);
+  }, [category]);
 
   const data = [
     {
