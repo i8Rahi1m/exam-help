@@ -9,3 +9,20 @@ body {
 .btndj::after{
   background-color: #80808056;
 }
+.custom-buton {
+  position: fixed;
+  top: 0.55rem;
+  left: 70px;
+  font-size: 21px;
+  border-radius: 9999px;
+  background-color: black;
+  z-index: 2;
+  border: 1px solid #ffffffc8;
+  transition: all 0.3s;
+  height: 45px;
+  width: 45px;
+}
+
+.custom-buton:hover {
+  box-shadow: 0px 0px 8px white;
+}

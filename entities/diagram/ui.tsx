@@ -35,7 +35,7 @@ export const Diagram = () => {
 
   const data = [
     {
-      name: 'Сложность',
+      name: '',
       Четные: even,
       Нечетные: odd,
     },
