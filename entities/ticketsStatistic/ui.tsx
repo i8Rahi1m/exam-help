@@ -19,12 +19,12 @@ const TicketsStatistic: React.FC = () => {
             >
               <span
                 style={{ textShadow: "0 0 20px #dedede" }}
-                className="text-white text-2xl"
+                className="text-white text-[25px]"
               >
                 Билет <span className="ml-1">{el.id}</span>
               </span>
 
-              <span className="p-[18px] px-3 bg-[#ffffff14] ml-3 rounded-xl text-[#9f9f9f]">
+              <span className="p-[18px] px-3 text-[22px] bg-[#ffffff14] ml-3 rounded-xl text-[#9f9f9f]">
                 {el.diff}
               </span>
             </Link>
@@ -34,16 +34,16 @@ const TicketsStatistic: React.FC = () => {
           {evenTicks.map((el) => (
             <Link
               href={`/${Tickets[0].key}/${el.id}`}
-              className="transition-[0.5s] p-3.5 pr-0 text-2xl flex justify-between h-[65px] items-center bg-black rounded-xl border-[1px] border-[gray] border-l-[6px] border-l-[#4981ea] hover:bg-[#000000ab] hover:shadow-[0px_0px_10px_gray] hover:scale-[1.02]"
+              className="transition-[0.5s] p-3.5 pr-0 flex justify-between h-[65px] items-center bg-black rounded-xl border-[1px] border-[gray] border-l-[6px] border-l-[#4981ea] hover:bg-[#000000ab] hover:shadow-[0px_0px_10px_gray] hover:scale-[1.02]"
             >
               <span
                 style={{ textShadow: "0 0 20px #dedede" }}
-                className="text-white text-2xl"
+                className="text-white text-[25px]"
               >
                 Билет <span className="ml-1">{el.id}</span>
               </span>
 
-              <span className="p-[18px] px-3 bg-[#ffffff14] ml-3 rounded-xl text-[#9f9f9f]">
+              <span className="p-[18px] px-3 text-[22px] bg-[#ffffff14] ml-3 rounded-xl text-[#9f9f9f]">
                 {el.diff}
               </span>
             </Link>
