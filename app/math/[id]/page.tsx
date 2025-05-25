@@ -50,7 +50,7 @@ export default function MathTaskPage() {
             {el.time !== undefined && (
               <button
                 onClick={() => setVideoStart(el.time)}
-                className="pl-3 pr-2.5 py-1 rounded-lg bg-[#444] text-white hover:bg-[#666] ml-4 transition"
+                className="pl-2 pr-1.5 py-0.5 text-[25fix2px] rounded-lg bg-[#444] text-white hover:bg-[#666] ml-4 transition"
               >
                 ▶
               </button>
