@@ -23,7 +23,9 @@ export default function MathTaskPage() {
     );
   }
 
-  const videoUrl = `https://www.youtube.com/embed/${theme.video}${videoStart !== null ? `?start=${videoStart}&autoplay=1` : ""}`;
+  const videoUrl = `https://www.youtube.com/embed/${theme.video}${
+    videoStart !== null ? `?start=${videoStart}&autoplay=1` : ""
+  }`;
 
   return (
     <div className="p-6 px-4 max-w-4xl mx-auto space-y-6">
@@ -35,15 +37,16 @@ export default function MathTaskPage() {
         >
           {category.title.toUpperCase()}
         </span>
-        -
-        <span className="ml-2.5">{theme.theme}</span>
+        -<span className="ml-2.5">{theme.theme}</span>
       </h1>
 
       <div className="bg-[#3c3c3c99] p-4 rounded-3xl border-[1px] border-[#8080806a]">
         <h2 className="text-lg font-semibold">Задачи:</h2>
         {theme.tasks.map((el) => (
           <div key={el.id} className="flex items-center justify-between py-1">
-            <p className="text-[23px] px-1.5 rounded-lg bg-[#444] text-white">{el.task}</p>
+            <p className="text-[23px] px-1.5 rounded-lg bg-[#444] text-white">
+              {el.task}
+            </p>
             {el.time !== undefined && (
               <button
                 onClick={() => setVideoStart(el.time)}
