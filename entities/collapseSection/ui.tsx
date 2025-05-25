@@ -38,7 +38,7 @@ const CollapseSection: React.FC = () => {
   };
 
   const handleNavigation = (id: number, title: string) => {
-    router.push(`/${title}/${id}`);
+    router.push(`/tickets/${title}/${id}`);
   };
 
   const items: CollapseProps['items'] = Tickets[0].ticks.map((tick) => ({
@@ -73,9 +73,6 @@ const CollapseSection: React.FC = () => {
       <Collapse
         bordered={false}
         defaultActiveKey={['1']}
-        expandIcon={({ isActive }) => (
-          <CaretRightOutlined rotate={isActive ? 90 : 0} />
-        )}
         items={items}
       />
     </section>

@@ -10,12 +10,13 @@ const TicketsStatistic: React.FC = () => {
 
   return (
     <section className="p-4 mt-[35px]">
-      <div className="flex gap-6 justify-between">
+      <div className="flex justify-between">
         <div className="flex flex-col gap-3">
           {oddTicks.map((el) => (
             <Link
-              href={`/${Tickets[0].key}/${el.id}`}
-              className="transition-[0.5s] p-3.5 pr-0 flex justify-between h-[65px] items-center bg-black rounded-xl border-[1px] border-[gray] border-l-[6px] border-l-[#B0C4DE] hover:bg-[#000000ab] hover:shadow-[0px_0px_10px_gray] hover:scale-[1.02]"
+              key={el.id}
+              href={`/tickets/${Tickets[0].key}/${el.id}`}
+              className="transition-[0.5s] p-3.5 w-[43vw] pr-0 flex justify-between h-[65px] items-center bg-black rounded-xl border-[1px] border-[gray] border-l-[6px] border-l-[#B0C4DE] hover:bg-[#000000ab] hover:shadow-[0px_0px_10px_gray] hover:scale-[1.02]"
             >
               <span
                 style={{ textShadow: "0 0 20px #dedede" }}
@@ -33,8 +34,9 @@ const TicketsStatistic: React.FC = () => {
         <div className="flex flex-col gap-3">
           {evenTicks.map((el) => (
             <Link
-              href={`/${Tickets[0].key}/${el.id}`}
-              className="transition-[0.5s] p-3.5 pr-0 flex justify-between h-[65px] items-center bg-black rounded-xl border-[1px] border-[gray] border-l-[6px] border-l-[#4981ea] hover:bg-[#000000ab] hover:shadow-[0px_0px_10px_gray] hover:scale-[1.02]"
+              key={el.id}
+              href={`/tickets/${Tickets[0].key}/${el.id}`}
+              className="transition-[0.5s] p-3.5 pr-0 w-[43vw] flex justify-between h-[65px] items-center bg-black rounded-xl border-[1px] border-[gray] border-l-[6px] border-l-[#4981ea] hover:bg-[#000000ab] hover:shadow-[0px_0px_10px_gray] hover:scale-[1.02]"
             >
               <span
                 style={{ textShadow: "0 0 20px #dedede" }}
