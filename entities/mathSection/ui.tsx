@@ -13,7 +13,7 @@ const MathSection: React.FC = () => {
         <Link
           key={el.id}
           href={`/math/${el.id}`}
-          className="transition duration-200 p-3.5 md:w-[43vw] w-full pr-0 flex justify-between h-[65px] items-center bg-black rounded-xl border border-gray-500 border-l-[6px] border-l-[red] hover:bg-[#000000ab] hover:shadow-[0_0_10px_gray] hover:scale-[1.02]"
+          className="transition duration-200 p-3.5 md:w-[43vw] mb-3 w-full pr-0 flex justify-between h-[65px] items-center bg-black rounded-xl border border-gray-500 border-l-[6px] border-l-[red] hover:bg-[#000000ab] hover:shadow-[0_0_10px_gray] hover:scale-[1.02]"
         >
           <span
             style={{ textShadow: "0 0 20px #dedede" }}

@@ -42,21 +42,28 @@ export default function MathTaskPage() {
 
       <div className="bg-[#3c3c3c99] p-4 rounded-3xl border-[1px] border-[#8080806a]">
         <h2 className="text-lg font-semibold">Задачи:</h2>
-        {theme.tasks.map((el) => (
-          <div key={el.id} className="flex items-center justify-between py-1">
-            <p className="text-[23px] px-1.5 rounded-lg bg-[#444] text-white">
-              {el.task}
-            </p>
-            {el.time !== undefined && (
-              <button
-                onClick={() => setVideoStart(el.time)}
-                className="pl-2 pr-1.5 py-0.5 text-[25fix2px] rounded-lg bg-[#444] text-white hover:bg-[#666] ml-4 transition"
+        {theme.tasks.map((el) => {
+          if (typeof el === "object" && el !== null && "id" in el) {
+            return (
+              <div
+                key={el.id}
+                className="flex items-center justify-between py-1"
               >
-                ▶
-              </button>
-            )}
-          </div>
-        ))}
+                <p className="text-[23px] px-1.5 rounded-lg bg-[#444] text-white">
+                  {el.task}
+                </p>
+                {el.time !== undefined && (
+                  <button
+                    onClick={() => setVideoStart(el.time)}
+                    className="pl-2 pr-1.5 py-0.5 text-[25px] rounded-lg bg-[#444] text-white hover:bg-[#666] ml-4 transition"
+                  >
+                    ▶
+                  </button>
+                )}
+              </div>
+            );
+          }
+        })}
       </div>
 
       {theme.video && (
@@ -78,6 +85,7 @@ export default function MathTaskPage() {
           </div>
         </div>
       )}
+      <div></div>
     </div>
   );
 }
