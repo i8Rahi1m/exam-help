@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useParams, useRouter } from 'next/navigation';
-import { Tickets } from '@/database/tickets';
-import { HomeLink } from '@/components/homeLink/ui';
-import { JSX } from 'react';
-import { ArrowLeft, ArrowRight } from 'lucide-react'; // или любой другой иконкой, можно текстом
+import { useParams, useRouter } from "next/navigation";
+import { Tickets } from "@/database/tickets";
+import { HomeLink } from "@/components/homeLink/ui";
+import { JSX } from "react";
+import { ArrowLeft, ArrowRight } from "lucide-react"; // или любой другой иконкой, можно текстом
 
 export default function TicketAnswerPage() {
   const router = useRouter();
@@ -12,11 +12,11 @@ export default function TicketAnswerPage() {
   const key = params?.title as string;
   const id = parseInt(params?.id as string);
 
-  const category = Tickets.find(ticket => ticket.key === key);
-  const ticket = category?.ticks.find(t => t.id === id);
+  const category = Tickets.find((ticket) => ticket.key === key);
+  const ticket = category?.ticks.find((t) => t.id === id);
 
-  const nextTicket = category?.ticks.find(t => t.id === id + 1);
-  const prevTicket = category?.ticks.find(t => t.id === id - 1);
+  const nextTicket = category?.ticks.find((t) => t.id === id + 1);
+  const prevTicket = category?.ticks.find((t) => t.id === id - 1);
 
   if (!category || !ticket) {
     return (
@@ -69,14 +69,14 @@ export default function TicketAnswerPage() {
   return (
     <div className="p-6 px-4 max-w-4xl mx-auto space-y-6 relative">
       <HomeLink />
-      
+
       {/* Back Button */}
       {prevTicket && (
         <button
           onClick={() => router.push(`/tickets/${key}/${id - 1}`)}
-          className="transition-[0.4s] md:fixed absolute md:top-[41vh] top-[100px] left-0 md:h-[100px] h-[50px] px-2 rounded-r-full bg-[black] z-20 border-[1px] border-l-[1px] border-l-[#272727] border-[#ffffffc8] hover:bg-[#434343] hover:shadow-[0px_0px_8px_white] after:shadow-2xl"
+          className="transition-[0.4s] md:fixed absolute md:top-[41vh] top-[100px] left-0 md:h-[100px] h-[50px] px-2 rounded-r-full bg-[black] z-20 border-[1px] border-l-[1px] border-l-[#272727] border-[#ffffffc8] hover:bg-[#434343] hover:shadow-[0px_0px_8px_white] after:shadow-2xl active:bg-[#636363] active:shadow-[0px_0px_11px_gray]"
         >
-          <ArrowLeft className='scale-125'/>
+          <ArrowLeft className="scale-125" />
         </button>
       )}
 
@@ -84,9 +84,9 @@ export default function TicketAnswerPage() {
       {nextTicket && (
         <button
           onClick={() => router.push(`/tickets/${key}/${id + 1}`)}
-          className="transition-[0.4s] md:fixed absolute md:top-[41vh] top-[100px] right-0 md:h-[100px] h-[50px] px-2 rounded-l-full bg-[black] z-20 border-[1px] border-r-[2px] border-r-[#272727] border-[#ffffffc8] hover:bg-[#434343] hover:shadow-[0px_0px_8px_white] after:shadow-2xl"
+          className="transition-[0.4s] md:fixed absolute md:top-[41vh] top-[100px] right-0 md:h-[100px] h-[50px] px-2 rounded-l-full bg-[black] z-20 border-[1px] border-r-[2px] border-r-[#272727] border-[#ffffffc8] hover:bg-[#434343] hover:shadow-[0px_0px_8px_white] after:shadow-2xl active:bg-[#636363] active:shadow-[0px_0px_11px_gray]"
         >
-          <ArrowRight className='scale-125'/>
+          <ArrowRight className="scale-125" />
         </button>
       )}
 

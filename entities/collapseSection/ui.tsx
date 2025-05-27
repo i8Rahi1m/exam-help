@@ -48,7 +48,7 @@ const CollapseSection: React.FC = () => {
         <span className="-ml-4.5">Билет {tick.id}</span>
         <button
           onClick={() => handleNavigation(tick.id, Tickets[0].key)}
-          className="transition-[0.3s] p-1.5 text-[22px] rounded-2xl hover:bg-[#80808056] cursor-pointer hover:scale-[1.2]"
+          className="transition-[0.3s] p-1.5 text-[22px] rounded-2xl hover:bg-[#80808056] cursor-pointer hover:scale-[1.2] active:bg-[#505050] active:scale-[1.2] active:shadow-[0px_0px_11px_gray]"
         >
           <LuPanelLeftOpen />
         </button>
