@@ -1,10 +1,12 @@
 "use client";
 
+import { IoStatsChart } from "react-icons/io5";
 import { useParams, useRouter } from "next/navigation";
 import { Tickets } from "@/database/tickets";
 import { HomeLink } from "@/components/homeLink/ui";
 import { JSX } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react"; // или любой другой иконкой, можно текстом
+import Link from "next/link";
 
 export default function TicketAnswerPage() {
   const router = useRouter();
@@ -69,6 +71,9 @@ export default function TicketAnswerPage() {
   return (
     <div className="p-6 px-4 max-w-4xl mx-auto space-y-6 relative">
       <HomeLink />
+      <Link href={`/statistic/${key}`} className="transition-[0.3s] fixed top-[10px] left-[70px] p-2 text-[22px] rounded-full bg-[black] z-2 border-[1px] border-[#ffffffc8] hover:bg-[#434343] hover:shadow-[0px_0px_8px_white] after:shadow-2xl active:bg-[#696969] active:scale-110">
+        <IoStatsChart/>
+      </Link>
 
       {/* Back Button */}
       {prevTicket && (
