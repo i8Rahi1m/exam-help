@@ -69,7 +69,7 @@ const CollapseSection: React.FC = () => {
   
 
   return (
-    <section className="p-4">
+    <section className="p-4 max-w-4xl mx-auto">
       <Collapse
         bordered={false}
         defaultActiveKey={['1']}
