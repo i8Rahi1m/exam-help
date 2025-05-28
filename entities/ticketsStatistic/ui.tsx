@@ -20,7 +20,7 @@ const TicketsStatistic: React.FC = () => {
             >
               <span
                 style={{ textShadow: "0 0 20px #dedede" }}
-                className="text-white text-[23.5px]"
+                className="text-white text-[22px]"
               >
                 Билет <span className="ml-1">{el.id}</span>
               </span>
