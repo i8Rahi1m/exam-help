@@ -25,7 +25,7 @@ const TicketsStatistic: React.FC = () => {
                 Билет <span className="ml-1">{el.id}</span>
               </span>
 
-              <span className="p-[18px] px-3 text-[22px] bg-[#ffffff14] ml-3 rounded-xl text-[#9f9f9f]">
+              <span className="p-[18px] px-3 text-[22.5px] bg-[#ffffff14] ml-3 rounded-xl text-[#9f9f9f]">
                 {el.diff}
               </span>
             </Link>
@@ -40,7 +40,7 @@ const TicketsStatistic: React.FC = () => {
             >
               <span
                 style={{ textShadow: "0 0 20px #dedede" }}
-                className="text-white text-[23.5px]"
+                className="text-white text-[22.5px]"
               >
                 Билет <span className="ml-1">{el.id}</span>
               </span>

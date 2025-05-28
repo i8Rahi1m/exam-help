@@ -19,8 +19,8 @@ body {
   z-index: 2;
   border: 1px solid #ffffffc8;
   transition: all 0.3s;
-  height: 43px;
-  width: 43px;
+  height: 42px;
+  width: 42.5px;
 }
 
 .custom-buton:hover {
