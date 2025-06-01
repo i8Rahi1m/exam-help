@@ -108,7 +108,7 @@ export default function TicketAnswerPage() {
       </h1>
 
       <div className="space-y-[40px] pt-3">
-        <div className="bg-[#3c3c3c99] p-4 rounded-3xl border-[1px] border-[#8080806a] inset-shadow-[0px_0px_15px] inset-shadow-[#000]">
+        <div className="bg-[#3c3c3c99] p-4 rounded-3xl border-[1px] border-[#8080806a] inset-shadow-[0px_0px_20px] inset-shadow-[#000]">
           <h2 className="text-lg font-semibold">Вопросы:</h2>
           <pre className="whitespace-pre-wrap -ml-2">
             {formatTextWithMarkers(ticket.ques)}
@@ -117,10 +117,10 @@ export default function TicketAnswerPage() {
 
         {ticket.answers?.map((answer) => (
           <div key={answer.num}>
-            <h2 className="text-lg font-medium bg-[#323232d9] border-[1px] border-[#8080806a] border-b-0 rounded-t-2xl p-1.5 px-4 text-[23px] inset-shadow-[0px_0px_15px] inset-shadow-[#000]">
+            <h2 className="text-lg font-medium bg-[#323232d9] border-[1px] border-[#8080806a] border-b-0 rounded-t-2xl p-1.5 px-4 text-[23px] inset-shadow-[0px_10px_20px] inset-shadow-[#101010]">
               Ответ {answer.num}
             </h2>
-            <div className="bg-[#0f0f0f] p-4 rounded-b-2xl border-[1px] border-[#5b5b5ba0] border-t-0 text-[18px] inset-shadow-[0px_0px_15px] inset-shadow-[#000]">
+            <div className="bg-[#0f0f0f] p-4 rounded-b-2xl border-[1px] border-[#5b5b5ba0] border-t-0 text-[18px] inset-shadow-[0px_-5px_20px] inset-shadow-[#000]">
               {formatTextWithMarkers(answer.ans)}
             </div>
           </div>
