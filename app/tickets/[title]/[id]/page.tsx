@@ -81,7 +81,7 @@ export default function TicketAnswerPage() {
       {prevTicket && (
         <button
           onClick={() => router.push(`/tickets/${key}/${id - 1}`)}
-          className="transition-[0.4s] md:fixed absolute md:top-[41vh] top-[100px] left-0 md:h-[100px] h-[50px] px-2 rounded-r-full bg-[black] z-5 border-[1px] border-l-[1px] border-l-[#272727] border-[#ffffffc8] hover:bg-[#434343] hover:shadow-[0px_0px_8px_white] after:shadow-2xl active:bg-[#636363] active:shadow-[0px_0px_11px_gray]"
+          className="transition-[0.4s] md:fixed absolute md:top-[41vh] top-[100px] left-0 md:h-[90px] h-[50px] px-2 rounded-r-full bg-[black] z-5 border-[1px] border-l-[1px] border-l-[#272727] border-[#ffffffc8] hover:bg-[#434343] hover:shadow-[0px_0px_8px_white] after:shadow-2xl active:bg-[#636363] active:shadow-[0px_0px_11px_gray]"
         >
           <ArrowLeft className="scale-125" />
         </button>
@@ -91,7 +91,7 @@ export default function TicketAnswerPage() {
       {nextTicket && (
         <button
           onClick={() => router.push(`/tickets/${key}/${id + 1}`)}
-          className="transition-[0.4s] md:fixed absolute md:top-[41vh] top-[100px] right-0 md:h-[100px] h-[50px] px-2 rounded-l-full bg-[black] z-5 border-[1px] border-r-[2px] border-r-[#272727] border-[#ffffffc8] hover:bg-[#434343] hover:shadow-[0px_0px_8px_white] after:shadow-2xl active:bg-[#636363] active:shadow-[0px_0px_11px_gray]"
+          className="transition-[0.4s] md:fixed absolute md:top-[41vh] top-[100px] right-0 md:h-[90px] h-[50px] px-2 rounded-l-full bg-[black] z-5 border-[1px] border-r-[2px] border-r-[#272727] border-[#ffffffc8] hover:bg-[#434343] hover:shadow-[0px_0px_8px_white] after:shadow-2xl active:bg-[#636363] active:shadow-[0px_0px_11px_gray]"
         >
           <ArrowRight className="scale-125" />
         </button>
