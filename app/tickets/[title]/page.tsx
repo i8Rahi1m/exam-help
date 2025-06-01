@@ -13,7 +13,7 @@ export default function TicketStacks() {
 
   return (
     <div className="">
-      <Link href={`/statistic/${key}`} className="transition-[0.3s] fixed top-[10px] left-[70px] p-2 text-[22px] rounded-full bg-[black] z-2 border-[1px] border-[#ffffffc8] hover:bg-[#434343] hover:shadow-[0px_0px_8px_white] after:shadow-2xl active:bg-[#696969] active:scale-110">
+      <Link href={`/statistic/${key}`} className="transition-[0.3s] fixed top-[9.5px] left-[70px] p-2 text-[22.5px] rounded-full bg-[black] z-2 border-[1px] border-[#ffffffc8] hover:bg-[#434343] hover:shadow-[0px_0px_8px_white] after:shadow-2xl active:bg-[#696969] active:scale-110">
         <IoStatsChart/>
       </Link>
       <HomeLink/>
