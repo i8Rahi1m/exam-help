@@ -1,14 +1,11 @@
 @import "tailwindcss";
 
 body {
-  background: #212121;
+  background: #000;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.btndj::after{
-  background-color: #80808056;
-}
 .custom-buton {
   position: fixed;
   top: 0.55rem;

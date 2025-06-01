@@ -63,7 +63,8 @@ const CollapseSection: React.FC = () => {
       ...panelStyle,
       border: "1px solid gray",
       borderLeft: `5px solid ${Tickets[0].color}`,
-      background: 'black',
+      background: '#151515',
+      boxShadow: 'inset 0px 0px 15px #000'
     },
   }));
   
