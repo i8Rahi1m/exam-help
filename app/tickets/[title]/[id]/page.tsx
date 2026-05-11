@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { IoStatsChart } from "react-icons/io5";
 import { useParams, useRouter } from "next/navigation";
 import { Tickets } from "@/database/tickets";
