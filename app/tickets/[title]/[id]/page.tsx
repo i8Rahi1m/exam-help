@@ -5,7 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import { Tickets } from "@/database/tickets";
 import { HomeLink } from "@/components/homeLink/ui";
 import { JSX } from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react"; // или любой другой иконкой, можно текстом
+import { ArrowLeft, ArrowRight } from "lucide-react"; 
 import Link from "next/link";
 import ScrollButton from "@/components/scrollButton/ui";
 
