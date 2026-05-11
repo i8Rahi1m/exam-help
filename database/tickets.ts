@@ -1,5 +1,214 @@
 export const Tickets = [
   {
+    key: "english",
+    title: "English",
+    color: "#4f8cff",
+    ticks: [
+      {
+        id: 1,
+        diff: 1,
+        ques: "\\cMake up a sentence using Present Perfect\\cChange the sentence into Passive Voice: 'People speak English all over the world.'\\cMy Family",
+        answers: [
+          {
+            num: 1,
+            ans: "I have already finished my homework, so now I can spend some time with my friends.",
+          },
+          {
+            num: 2,
+            ans: "English is spoken all over the world and it is considered one of the most important international languages.",
+          },
+          {
+            num: 3,
+            ans: "My family is very important to me. There are five people in my family: my parents, my brother, my sister, and me. We always try to help and support each other in difficult situations. My father works very hard and my mother takes care of our home and family. In our free time we like watching movies, eating dinner together, and visiting relatives. Sometimes we go for walks or travel to other places together. I love my family because they always understand me and make me happy.",
+          },
+        ],
+      },
+
+      {
+        id: 2,
+        diff: 1,
+        ques: "\\cMake a question in Past Simple using the verb 'go'\\cTurn this sentence into Reported Speech: 'I am tired,' she said\\cMy School",
+        answers: [
+          {
+            num: 1,
+            ans: "Where did you go after finishing your classes yesterday?",
+          },
+          {
+            num: 2,
+            ans: "She said that she was tired after a long day at work.",
+          },
+          {
+            num: 3,
+            ans: "I study at a modern and comfortable school. Our school has many classrooms, a library, and computer rooms for students. My favorite subjects are English and computer science because they are interesting and useful for my future. The teachers at my school are friendly and always help students understand difficult topics. I also enjoy spending time with my classmates during breaks and school events. Our school often organizes competitions and activities that make studying more enjoyable. I am proud of my school and I like studying there.",
+          },
+        ],
+      },
+
+      {
+        id: 3,
+        diff: 2,
+        ques: "\\cMake a negative sentence in Future Simple\\cUse the 2nd Conditional to talk about winning the lottery\\cTajikistan",
+        answers: [
+          {
+            num: 1,
+            ans: "I will not stay at home tomorrow because I have important plans with my friends.",
+          },
+          {
+            num: 2,
+            ans: "If I won the lottery, I would buy a beautiful house for my family and help poor people.",
+          },
+          {
+            num: 3,
+            ans: "Tajikistan is a very beautiful country with amazing mountains, rivers, and lakes. I really love the nature and traditions of my country. Tajik people are very kind, welcoming, and hospitable to guests. We celebrate many national holidays, especially Navruz, which is one of my favorite celebrations. Our national food and music are also an important part of our culture. Tajikistan has many wonderful places that tourists can visit and enjoy. I am proud to live in Tajikistan and I love my country very much.",
+          },
+        ],
+      },
+
+      {
+        id: 4,
+        diff: 1,
+        ques: "\\cMake a sentence using Present Continuous\\cTurn this sentence into Passive Voice: 'The chef is cooking dinner.'\\cMy Favourite Season",
+        answers: [
+          {
+            num: 1,
+            ans: "My brother is studying for his exams while I am listening to music in my room.",
+          },
+          {
+            num: 2,
+            ans: "Dinner is being cooked by the chef for all the guests in the restaurant.",
+          },
+          {
+            num: 3,
+            ans: "My favourite season is spring because the weather becomes warm and comfortable. During spring the trees become green and flowers start blooming everywhere. I enjoy spending more time outside with my friends and family during this season. Spring is also special because we celebrate Navruz, which is an important holiday in Tajikistan. I like the fresh air and beautiful nature in spring. This season always gives me a good mood and more energy.",
+          },
+        ],
+      },
+
+      {
+        id: 5,
+        diff: 2,
+        ques: "\\cMake a question with 'have to'\\cUse the 1st Conditional to talk about tomorrow’s weather\\cMy Friend",
+        answers: [
+          {
+            num: 1,
+            ans: "Do students have to wear a school uniform every day at your school?",
+          },
+          {
+            num: 2,
+            ans: "If the weather is sunny tomorrow, we will go to the park and spend time together.",
+          },
+          {
+            num: 3,
+            ans: "My best friend is a very kind, honest, and helpful person. We have been friends for several years and we spend a lot of time together. He always supports me when I have problems or difficulties. We enjoy talking about movies, technology, and our future plans. Sometimes we play games or go for walks together after school. I trust my friend because he is loyal and responsible. I am very happy to have such a wonderful friend in my life.",
+          },
+        ],
+      },
+
+      {
+        id: 6,
+        diff: 2,
+        ques: "\\cMake a sentence in Past Perfect\\cTurn this into Reported Speech: 'I will help you,' he said\\cMy Hobbies",
+        answers: [
+          {
+            num: 1,
+            ans: "She had already left the house before I called her in the evening.",
+          },
+          {
+            num: 2,
+            ans: "He said that he would help me with my project the next day.",
+          },
+          {
+            num: 3,
+            ans: "I have several hobbies that help me relax and enjoy my free time. One of my favorite hobbies is watching movies and TV series in English. I also like listening to music and learning new things on the internet. Sometimes I play computer games with my friends after finishing my homework. In addition, I enjoy spending time outdoors and walking around the city. Hobbies are important because they make our lives more interesting and help reduce stress.",
+          },
+        ],
+      },
+
+      {
+        id: 7,
+        diff: 1,
+        ques: "\\cMake a negative sentence using 'can'\\cUse a modal verb to give advice\\cMy Future Profession",
+        answers: [
+          {
+            num: 1,
+            ans: "I cannot play the guitar very well because I started learning only recently.",
+          },
+          {
+            num: 2,
+            ans: "You should prepare for your exams carefully if you want to get good marks.",
+          },
+          {
+            num: 3,
+            ans: "In the future I would like to become a programmer because I am interested in technology and computers. This profession is very popular and useful in modern society. I want to create websites, applications, and different digital projects. I also enjoy solving problems and learning new things every day. I believe this job will help me build a successful future. I hope to work in a good company and improve my skills.",
+          },
+        ],
+      },
+
+      {
+        id: 8,
+        diff: 1,
+        ques: "\\cMake a sentence using Present Simple for daily routines\\cChange this into Passive Voice: 'They built a new school.'\\cMy Day",
+        answers: [
+          {
+            num: 1,
+            ans: "I usually wake up early in the morning and prepare for school before breakfast.",
+          },
+          {
+            num: 2,
+            ans: "A new school was built in our neighborhood last year.",
+          },
+          {
+            num: 3,
+            ans: "My day usually begins at seven o’clock in the morning. After waking up, I wash my face, have breakfast, and go to school. At school I study different subjects and spend time with my classmates. When I come home, I rest a little and then do my homework. In the evening I often watch videos, listen to music, or talk with my friends online. Before going to bed, I prepare everything for the next day.",
+          },
+        ],
+      },
+      {
+        id: 9,
+        diff: 2,
+        ques: "\\cPresent Perfect question with 'ever'\\c3rd Conditional\\cTravelling",
+        answers: [
+          { num: 1, ans: "Have you ever visited another country?" },
+          { num: 2, ans: "If I had studied harder, I would have passed the exam." },
+          { num: 3, ans: "I like travelling because it helps me learn about new cultures and places. I would like to visit many countries in the future." }
+        ]
+      },
+
+      {
+        id: 10,
+        diff: 2,
+        ques: "\\cUsed to\\cReported Speech\\cHolidays in Tajikistan",
+        answers: [
+          { num: 1, ans: "I used to play outside more when I was a child." },
+          { num: 2, ans: "He said that he didn’t like that movie." },
+          { num: 3, ans: "In Tajikistan we celebrate many holidays like Navruz. Families gather together and prepare traditional food." }
+        ]
+      },
+
+      {
+        id: 11,
+        diff: 2,
+        ques: "\\cFuture Continuous\\cPresent Perfect Continuous question\\cMy City",
+        answers: [
+          { num: 1, ans: "I will be studying at this time tomorrow." },
+          { num: 2, ans: "How long have you been studying English?" },
+          { num: 3, ans: "My city is big and lively. There are many shops, parks and schools. I like living here." }
+        ]
+      },
+
+      {
+        id: 12,
+        diff: 2,
+        ques: "\\cShould advice\\cPast Perfect question\\cFavourite Book",
+        answers: [
+          { num: 1, ans: "You should read more books." },
+          { num: 2, ans: "Had you finished your homework before the lesson started?" },
+          { num: 3, ans: "My favorite book is interesting and teaches many life lessons. I enjoy reading it." }
+        ]
+      }
+    ],
+  },
+  {
     key: "biology",
     title: "Биология",
     color: "#86dc3d",

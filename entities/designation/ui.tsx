@@ -12,13 +12,12 @@ export const Designation = () => {
   const [data, setData] = useState<{ key: string; color: string; title: string }[]>([]);
 
   useEffect(() => {
-    const ticketMatch = Tickets.find((el) => el.key === key);
-    if (ticketMatch) {
-      setData(Tickets);
-    } else {
-      setData(Math);
-    }
-  }, [key]);
+  if (Tickets.some((el) => el.key === key)) {
+    setData(Tickets.filter((el) => el.key === key));
+  } else {
+    setData(Math.filter((el) => el.key === key));
+  }
+}, [key]);
 
   return (
     <section>
