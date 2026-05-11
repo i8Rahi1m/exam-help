@@ -12,10 +12,12 @@
     "@ant-design/v5-patch-for-react-19": "^1.0.3",
     "antd": "^5.25.1",
     "lucide-react": "^0.511.0",
-    "next": "15.3.2",
+    "next": "^16.2.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
+    "react-server-dom-turbopack": "^19.2.6",
+    "react-server-dom-webpack": "^19.2.6",
     "recharts": "^2.15.3"
   },
   "devDependencies": {
